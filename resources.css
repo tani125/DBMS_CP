@@ -1,0 +1,262 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #9f9aff, #ff7d59, #77ff59);
+    background-size: 600% 600%;
+    animation: gradientBackground 5s ease infinite;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background-color: transparent; /* Initially transparent */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav.scrolled {
+    background-color: rgba(0, 123, 255, 0.8); /* Color when scrolled */
+}
+
+nav:hover {
+    transform: translateX(-50%) scale(1.05); /* Slightly enlarges the navbar */
+    background-color: rgba(0, 123, 255, 0.9); /* Darkens the background */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 120px 20px 10px; /* Increased bottom padding */
+    color: white; /* Added text color for hero section */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    opacity: 0; /* Start with opacity 0 for animation */
+    animation: fadeInSlide 1.5s forwards; /* Apply fade-in and slide-in animation */
+    animation-delay: 0.2s; /* Delay to start after the page loads */
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0; /* Start with opacity 0 for animation */
+    animation: fadeInSlide 1.5s forwards; /* Apply fade-in and slide-in animation */
+    animation-delay: 0.2s; /* Delay to start after the page loads */
+}
+
+.cta-button {
+    background-color: #ffdd57;
+    color: #333;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.main-content h2 {
+    color: #007bff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in animation for the container */
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    text-align: center;
+    opacity: 0;
+    animation: slideUp 0.5s forwards; /* Slide-up animation for each card */
+    animation-delay: 0.2s; /* Delay to allow the container to fade in first */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f0f0f0; /* Slight background color change on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    transition: transform 0.3s; /* Transition for image zoom effect */
+}
+
+.card img:hover {
+    transform: scale(1.05); /* Zoom effect on image hover */
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #555;
+    padding: 0 15px;
+}
+
+.card a {
+    display: inline-block;
+    margin: 15px 0;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Transition for link color and scale */
+}
+
+.card a:hover {
+    color: #0056b3;
+    transform: scale(1.1); /* Slight scale effect on link hover */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 2s 0.5s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Keyframes for the h1 animation */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Start slightly above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
+}
