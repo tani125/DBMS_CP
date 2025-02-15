@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Support System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="Mental_Health_Vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-text">
+            <h1>Your Mental Health Matters</h1>
+            <p>Find support, guidance, and helpful resources for your mental health journey.</p>
+            <a href="login.html" class="cta-button">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <h2>Explore Our Services</h2>
+        <p>Discover the support and resources you need to achieve wellness and personal growth. We offer a range of services to guide you every step of the way.</p>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Therapist Support</h3>
+                <p>Connect with licensed therapists who can help you navigate life’s challenges and improve your mental well-being.</p>
+                <a href="therapist.html" class="service-button">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Virtual Sessions</h3>
+                <p>Join virtual sessions from the comfort of your home. Our online services provide convenient access to expert care.</p>
+                <a href="session.html" class="service-button">Get Started</a>
+            </div>
+            <div class="service-card">
+                <h3>Helpful Resources</h3>
+                <p>Explore articles, guides, and self-help tools designed to support your mental health and personal growth.</p>
+                <a href="resources.html" class="service-button">Browse Resources</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mental Health Support System</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
