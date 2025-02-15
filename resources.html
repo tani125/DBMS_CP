@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Mental Health Support System</title>
+    <link rel="stylesheet" href="resources.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explore Mental Health Resources</h1>
+        <p>Your journey to better mental health starts here.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="Anxiety.png" alt="Article">
+                <h3>Article: Coping with Anxiety</h3>
+                <p>A deep dive into understanding anxiety and how to manage it.</p>
+                <a href="https://www.google.com/search?q=coping+with+anxiety+articles" target="_blank">Find Articles</a>
+            </div>
+            <div class="card">
+                <img src="Meditation_vid.png" alt="Video">
+                <h3>Video: Meditation for Stress Relief</h3>
+                <p>This video guides you through simple meditation techniques to reduce stress.</p>
+                <a href="https://www.youtube.com/results?search_query=meditation+for+stress+relief" target="_blank">Find Videos</a>
+            </div>
+            <div class="card">
+                <img src="Podcast.png" alt="Podcast">
+                <h3>Podcast: Understanding Depression</h3>
+                <p>Listen to mental health professionals talk about depression and self-care.</p>
+                <a href="https://www.google.com/search?q=understanding+depression+podcasts" target="_blank">Find Podcasts</a>
+            </div>
+            <div class="card">
+                <img src="book.png" alt="Book">
+                <h3>Book: The Mindful Way Through Depression</h3>
+                <p>This book provides practical mindfulness strategies for managing depression.</p>
+                <a href="https://www.google.com/search?q=The+Mindful+Way+Through+Depression+book" target="_blank">Find Book Info</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mental Health Support System</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) { // Change 50 to the desired scroll distance
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #555;
+            padding: 0 15px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin: 15px 0;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</body>
+</html>
