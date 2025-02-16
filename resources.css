@@ -157,7 +157,7 @@ nav ul li a:hover {
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     text-align: center;
     opacity: 0;
-    animation: slideUp 0.5s forwards; /* Slide-up animation for each card */
+    animation: slideUp 3s forwards; /* Slide-up animation for each card */
     animation-delay: 0.2s; /* Delay to allow the container to fade in first */
 }
 
